@@ -12,8 +12,9 @@ To learn more about UI Libraries and integrations, check out [UI Libraries](/doc
 
 - [`@refinedev/antd`](/docs/ui-integrations/ant-design/introduction) - [Ant Design](https://ant.design/) System UI Framework support. **20+** framework-specific `hooks` and  `components`  incl. Table, Form, Select, Menu, Layout, Notification and CRUD components.
 - [`@refinedev/mui`](/docs/ui-integrations/material-ui/introduction) - [Material UI](https://mui.com/material-ui/getting-started/overview/) Framework support. **20+** framework-specific `hooks` and  `components`  incl. DataGrid (+ Pro), AutoComplete, Menu, Layout, Notification and CRUD components.
-- [`@refinedev/mantine`](/docs/ui-integrations/mantine/introduction) - [Mantine](https://mantine.dev/) UI Framework support. **20+** framework-specific **hooks** and **components** incl. Table, Form, AutoComplete, Menu, Layout, Notification and CRUD components.
-- [`@refinedev/chakra-ui`](/docs/ui-integrations/chakra-ui/introduction) - [Chakra UI](https://chakra-ui.com/) UI Framework support. **20+** framework-specific **components** incl. Menu, Layout, Notification and CRUD components.
+- [`@refinedev/mantine`](/docs/ui-integrations/mantine/introduction) - [Mantine](https://mantine.dev/) UI Framework support. **20+** framework-specific `hooks` and `components` incl. Table, Form, AutoComplete, Menu, Layout, Notification and CRUD components.
+- [`@refinedev/chakra-ui`](/docs/ui-integrations/chakra-ui/introduction) - [Chakra UI](https://chakra-ui.com/) UI Framework support. **20+** framework-specific `components` incl. Menu, Layout, Notification and CRUD components.
+- [`@ferdiunal/refine-shadcn`](https://github.com/ferdiunal/refine-shadcn) - ShadCN UI components with Refine.
 
 ### Data Provider Packages:
 
@@ -24,7 +25,6 @@ To learn more about Data Providers, check out [Data Provider](/docs/data/data-pr
 - [`@refinedev/nestjsx-crud`](/docs/data/packages/nestjsx-crud) - Consume **REST API**'s built with **NestJs**.
 - [`@refinedev/nestjs-query`](/docs/data/packages/nestjs-query) - Consume **GraphQL API**'s built with **Nestjs-Query**.
 - [`@refinedev/strapi-v4`](/docs/data/packages/strapi-v4) - [Strapi](https://strapi.io/) connector for **v4 REST API.**
-- [`@refinedev/strapi-graphql`](/docs/data/packages/strapi-graphql) - [Strapi](https://strapi.io/) connector for **GraphQL API.**
 - [`@refinedev/strapi`](/docs/data/packages/strapi-v4) - [Strapi](https://strapi.io/) connector for **legacy REST API.**
 - [`@refinedev/supabase`](/docs/data/packages/supabase) -[Supabase](https://supabase.com/) data provider. Supports **Supabase Realtime** for **live/realtime** projects.
 - [`@refinedev/hasura`](/docs/data/packages/hasura) - [Hasura GraphQL](https://hasura.io/) data provider. Supports **GraphQL Subscriptions** for **live/realtime** projects.
@@ -40,8 +40,6 @@ To learn more about Router Providers, check out [Routing](/docs/guides-concepts/
 - [`@refinedev/nextjs-router`](/docs/routing/integrations/next-js) - Router Provider for [Next.js](https://nextjs.org/docs/api-reference/next/router#userouter)
 - [`@refinedev/remix-router`](/docs/routing/integrations/remix) - Router Provider for [Remix](https://remix.run/)
 - [`@refinenative/expo-router`](https://www.npmjs.com/package/@refinenative/expo-router) - Router Provider for [Expo](https://docs.expo.dev/)
-- `@pankod/refine-react-router` - Router Provider for [React Router (v5)](https://v5.reactrouter.com/)
-- `@pankod/refine-react-location` - Router Provider for [React Location](https://github.com/tannerlinsley/react-location)
 
 ### Live Provider Packages
 
@@ -79,3 +77,5 @@ To learn more about Live Providers, check out [Realtime](/docs/guides-concepts/r
 - [`refine-sqlite`](https://github.com/mateusabelli/refine-sqlite) - Connector for [SQLite](https://www.sqlite.org/index.html) backends
 - [`refine-jsonapi`](https://github.com/MahirMahdi/refine-jsonapi) - Connector for [JSON:API](https://jsonapi.org/) backends
 - [`@refine-auth/kinde-react`](https://github.com/hirenf14/refine-auth-kinde-react) - Support for [Kinde](https://kinde.com) authentication.
+- [`refine-pocketbase`](https://github.com/kruschid/refine-pocketbase) - Connector for backends created with [PocketBase](https://pocketbase.io/). Also has auth provider and live provider supports.
+- [`refine-postgrest-ts`](https://github.com/ffimnsr/refine-postgrest-ts) - Connector for [PostgREST](https://postgrest.org) backends.

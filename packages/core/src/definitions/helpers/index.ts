@@ -13,8 +13,8 @@ export { sequentialPromises } from "./sequentialPromises";
 export { pickDataProvider } from "./pickDataProvider";
 export { handleMultiple } from "./handleMultiple";
 export {
-    getNextPageParam,
-    getPreviousPageParam,
+  getNextPageParam,
+  getPreviousPageParam,
 } from "./useInfinitePagination";
 export { pickNotDeprecated } from "./pickNotDeprecated";
 export { legacyResourceTransform } from "./legacy-resource-transform";
@@ -30,3 +30,7 @@ export { keys, stripUndefined } from "./keys";
 export { KeyBuilder } from "./keys";
 export { flattenObjectKeys } from "./flatten-object-keys";
 export { propertyPathToArray } from "./property-path-to-array";
+export { downloadInBrowser } from "./downloadInBrowser";
+export { deferExecution } from "./defer-execution";
+export { asyncDebounce } from "./async-debounce";
+export { prepareQueryContext } from "./prepare-query-context";

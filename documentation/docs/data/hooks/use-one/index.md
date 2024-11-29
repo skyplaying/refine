@@ -32,7 +32,7 @@ When the `useOne` hook is mounted, it will call the `subscribe` method from the 
 
 ### resource <PropTag required />
 
-This parameter will be passed to the `getOne` method from the `dataProvider` as a parameter. t is usually used as an API endpoint path but it all depends on how you handle the `resource` in the `getOne` method.
+This parameter will be passed to the `getOne` method from the `dataProvider` as a parameter. It is usually used as an API endpoint path but it all depends on how you handle the `resource` in the `getOne` method.
 
 ```tsx
 useOne({
@@ -40,7 +40,7 @@ useOne({
 });
 ```
 
-> For more information, refer to the [creating a data provider tutorial &#8594](/docs/tutorial/understanding-dataprovider/create-dataprovider/)
+> For more information, refer to the [creating a data provider tutorial &#8594](/docs/data/data-provider)
 
 If you have multiple resources with the same name, you can pass the `identifier` instead of the `name` of the resource. It will only be used as the main matching key for the resource, data provider methods will still work with the `name` of the resource defined in the `<Refine/>` component.
 

@@ -9,7 +9,7 @@ export default function UseSelectMaterialUI() {
         "@refinedev/core": "latest",
         "@refinedev/simple-rest": "latest",
         "@refinedev/react-hook-form": "latest",
-        "@refinedev/mui": "latest",
+        "@refinedev/mui": "5.0.0",
         "@mui/material": "latest",
       }}
       startRoute="/"
@@ -31,7 +31,7 @@ import React from "react";
 import { Refine } from "@refinedev/core";
 import {
     RefineThemes,
-    notificationProvider,
+    useNotificationProvider,
     RefineSnackbarProvider,
 } from "@refinedev/mui";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -50,7 +50,7 @@ const App: React.FC = () => {
                     dataProvider={dataProvider(
                         "https://api.fake-rest.refine.dev",
                     )}
-                    notificationProvider={notificationProvider}
+                    notificationProvider={useNotificationProvider}
                     resources={[
                         {
                             name: "posts",
@@ -81,7 +81,7 @@ import Typography from "@mui/material/Typography";
 export const EditPage: React.FC = () => {
     const {
         saveButtonProps,
-        refineCore: { queryResult: productQueryResult },
+        refineCore: { query: productQuery },
         register,
         control,
     } = useForm<IProduct>({
@@ -91,7 +91,7 @@ export const EditPage: React.FC = () => {
             action: "edit",
         },
     });
-    const product = productQueryResult?.data?.data;
+    const product = productQuery?.data?.data;
 
     const { autocompleteProps, queryResult: categoriesQueryResult } =
         useAutocomplete<ICategory>({

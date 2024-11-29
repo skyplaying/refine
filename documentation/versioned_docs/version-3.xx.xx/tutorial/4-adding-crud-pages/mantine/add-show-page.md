@@ -3,8 +3,8 @@ id: add-show-page
 title: 3. Adding Show Page
 tutorial:
   order: 0
-  prev: tutorial/adding-crud-pages/{preferredUI}/add-edit-page
-  next: tutorial/adding-crud-pages/{preferredUI}/add-create-page
+  prev: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-edit-page
+  next: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-create-page
 ---
 
 Show page is the page where you can see the record. In this tutorial, we will create the show page for the `blog_posts` resource.
@@ -37,7 +37,7 @@ import {
   MantineProvider,
   Global,
   NotificationsProvider,
-  notificationProvider,
+  useNotificationProvider,
   LightTheme,
   Layout,
   ReadyPage,
@@ -53,7 +53,7 @@ const App = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
           Layout={Layout}
@@ -140,7 +140,7 @@ import {
     MantineProvider,
     Global,
     NotificationsProvider,
-    notificationProvider,
+    useNotificationProvider,
     LightTheme,
     Layout,
     ReadyPage,
@@ -163,7 +163,7 @@ const App = () => {
                     dataProvider={dataProvider(
                         "https://api.fake-rest.refine.dev",
                     )}
-                    notificationProvider={notificationProvider}
+                    notificationProvider={useNotificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
                     Layout={Layout}

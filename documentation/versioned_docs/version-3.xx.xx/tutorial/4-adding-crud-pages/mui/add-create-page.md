@@ -3,8 +3,8 @@ id: add-create-page
 title: 4. Adding Create Page
 tutorial:
   order: 0
-  prev: tutorial/adding-crud-pages/{preferredUI}/add-show-page
-  next: tutorial/adding-crud-pages/{preferredUI}/add-delete-feature
+  prev: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-show-page
+  next: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-delete-feature
 ---
 
 Create page is the page where you can create the record. In this tutorial, we will create the create page for the `blog_posts` resource.
@@ -40,7 +40,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   RefineSnackbarProvider,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           Layout={Layout}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
@@ -140,7 +140,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   RefineSnackbarProvider,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
@@ -161,7 +161,7 @@ const App: React.FC = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           Layout={Layout}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}

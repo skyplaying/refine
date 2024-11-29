@@ -3,8 +3,8 @@ id: add-create-page
 title: 4. Adding Create Page
 tutorial:
   order: 0
-  prev: tutorial/adding-crud-pages/{preferredUI}/add-show-page
-  next: tutorial/adding-crud-pages/{preferredUI}/add-delete-feature
+  prev: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-show-page
+  next: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-delete-feature
 ---
 
 Create page is the page where you can create the record. In this tutorial, we will create the create page for the `blog_posts` resource.
@@ -37,7 +37,7 @@ import {
   MantineProvider,
   Global,
   NotificationsProvider,
-  notificationProvider,
+  useNotificationProvider,
   LightTheme,
   Layout,
   ReadyPage,
@@ -53,7 +53,7 @@ const App = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
           Layout={Layout}
@@ -133,7 +133,7 @@ import {
     MantineProvider,
     Global,
     NotificationsProvider,
-    notificationProvider,
+    useNotificationProvider,
     LightTheme,
     Layout,
     ReadyPage,
@@ -157,7 +157,7 @@ const App = () => {
                     dataProvider={dataProvider(
                         "https://api.fake-rest.refine.dev",
                     )}
-                    notificationProvider={notificationProvider}
+                    notificationProvider={useNotificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
                     Layout={Layout}

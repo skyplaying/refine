@@ -27,7 +27,7 @@ const AppTsxCode = /* tsx */ `
 import React from "react";
 
 import { Refine } from "@refinedev/core";
-import routerProvider from "@refinedev/nextjs-router";
+import routerProvider from "@refinedev/nextjs-router/pages";
 import dataProvider from "@refinedev/simple-rest";
 import type { AppProps } from "next/app";
 
@@ -56,7 +56,7 @@ const ListPageTsxCode = /* tsx */ `
 import React from "react";
 
 import { useTable } from "@refinedev/core";
-import { parseTableParams } from "@refinedev/nextjs-router";
+import { parseTableParams } from "@refinedev/nextjs-router/pages";
 import dataProvider from "@refinedev/simple-rest";
 
 import { ProductList } from "../../components/products/list";
@@ -122,7 +122,7 @@ import React from "react";
 
 export const ProductList: React.FC = ({ tableProps }) => {
   const {
-    tableQueryResult,
+    tableQuery,
     isLoading,
     current,
     setCurrent,
@@ -148,7 +148,7 @@ export const ProductList: React.FC = ({ tableProps }) => {
           </tr>
         </thead>
         <tbody>
-          {tableQueryResult.data?.data?.map((record) => (
+          {tableQuery.data?.data?.map((record) => (
             <tr key={record.id}>
               <td>{record.id}</td>
               <td>{record.name}</td>

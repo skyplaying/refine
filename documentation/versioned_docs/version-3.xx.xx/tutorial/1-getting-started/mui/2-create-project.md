@@ -2,8 +2,8 @@
 id: create-project
 title: 3. Create your refine project
 tutorial:
-  prev: tutorial/getting-started/{preferredUI}/prepare-env
-  next: tutorial/getting-started/{preferredUI}/generate-crud-pages
+  prev: 3.xx.xx/tutorial/getting-started/{preferredUI}/prepare-env
+  next: 3.xx.xx/tutorial/getting-started/{preferredUI}/generate-crud-pages
 ---
 
 import Tabs from '@theme/Tabs';
@@ -100,7 +100,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   RefineSnackbarProvider,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
@@ -114,7 +114,7 @@ const App: React.FC = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           Layout={Layout}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}

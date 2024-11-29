@@ -107,7 +107,7 @@ render(<App />);
 Example of above showing how to use `<ThemedLayoutV2>` with [`React Router v6`](/docs/packages/list-of-packages). You can see these examples for other routers:
 
 - [React Router v6](https://github.com/refinedev/refine/blob/master/examples/auth-antd/src/App.tsx#L186)
-- [Next.js](https://github.com/refinedev/refine/blob/master/examples/with-nextjs-auth/pages/_app.tsx#L31)
+- [Next.js](https://github.com/refinedev/refine/blob/master/examples/with-nextjs/src/app/layout.tsx#L35)
 - [Remix](https://github.com/refinedev/refine/blob/master/examples/with-remix-auth/app/routes/_protected.tsx)
 
 ## Props
@@ -651,7 +651,11 @@ const App = () => {
     <Refine
     /* ... */
     >
-      <ThemedLayoutV2 Header={ThemedHeaderV2} Sider={ThemedSiderV2} Title={ThemedTitleV2}>
+      <ThemedLayoutV2
+        Header={ThemedHeaderV2}
+        Sider={ThemedSiderV2}
+        Title={ThemedTitleV2}
+      >
         /* ... */
       </ThemedLayoutV2>
     </Refine>
@@ -694,7 +698,11 @@ setInitialRoutes(["/"]);
 
 import { Refine } from "@refinedev/core";
 // highlight-next-line
-import { ThemedLayoutV2, RefineThemes, useThemedLayoutContext } from "@refinedev/antd";
+import {
+  ThemedLayoutV2,
+  RefineThemes,
+  useThemedLayoutContext,
+} from "@refinedev/antd";
 import { ConfigProvider, Button, Space } from "antd";
 import { AntdInferencer } from "@refinedev/inferencer/antd";
 
@@ -709,11 +717,19 @@ const API_URL = "https://api.fake-rest.refine.dev";
 
 // highlight-start
 const DashboardPage = () => {
-  const { siderCollapsed, setSiderCollapsed, mobileSiderOpen, setMobileSiderOpen } = useThemedLayoutContext();
+  const {
+    siderCollapsed,
+    setSiderCollapsed,
+    mobileSiderOpen,
+    setMobileSiderOpen,
+  } = useThemedLayoutContext();
 
   return (
     <Space style={{ paddingTop: 30 }}>
-      <Button type="primary" onClick={() => setMobileSiderOpen(!mobileSiderOpen)}>
+      <Button
+        type="primary"
+        onClick={() => setMobileSiderOpen(!mobileSiderOpen)}
+      >
         toggle mobile sider
       </Button>
       <Button type="primary" onClick={() => setSiderCollapsed(!siderCollapsed)}>

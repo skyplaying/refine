@@ -165,18 +165,6 @@
       "to": "/docs/data/hooks/use-show"
     },
     {
-      "from": "/docs/core/hooks/translate/useGetLocale/",
-      "to": "/docs/i18n/hooks/use-get-locale"
-    },
-    {
-      "from": "/docs/core/hooks/translate/useSetLocale/",
-      "to": "/docs/i18n/hooks/use-set-locale"
-    },
-    {
-      "from": "/docs/core/hooks/translate/useTranslate/",
-      "to": "/docs/i18n/hooks/use-translate"
-    },
-    {
       "from": "/docs/core/hooks/ui/useMenu/",
       "to": "/docs/core/hooks/utilities/use-menu"
     },
@@ -271,14 +259,6 @@
     {
       "from": "/docs/guides-and-concepts/multi-level-menu/",
       "to": "/docs/advanced-tutorials/multi-level-menu/"
-    },
-    {
-      "from": "/docs/guides-and-concepts/multi-tenancy/appwrite/",
-      "to": "/docs/guides-concepts/multi-tenancy"
-    },
-    {
-      "from": "/docs/guides-and-concepts/multi-tenancy/strapi-v4/",
-      "to": "/docs/guides-concepts/multi-tenancy"
     },
     {
       "from": "/docs/guides-and-concepts/mutation-mode/",
@@ -626,23 +606,23 @@
     },
     {
       "from": "/docs/tutorials/ant-design-tutorial/",
-      "to": "/docs/tutorial/introduction/index/"
+      "to": "/tutorial"
     },
     {
       "from": "/docs/tutorials/headless-tutorial/",
-      "to": "/docs/tutorial/introduction/index/"
+      "to": "/tutorial"
     },
     {
       "from": "/docs/tutorials/material-ui-tutorial/",
-      "to": "/docs/tutorial/introduction/index/"
+      "to": "/tutorial"
     },
     {
       "from": "/docs/tutorials/mantine-tutorial/",
-      "to": "/docs/tutorial/introduction/index/"
+      "to": "/tutorial"
     },
     {
       "from": "/docs/tutorials/chakra-ui-tutorial/",
-      "to": "/docs/tutorial/introduction/index/"
+      "to": "/tutorial"
     },
     {
       "from": "/docs/guides-and-concepts/telemetry/",
@@ -1096,18 +1076,6 @@
     {
       "from": "/docs/api-reference/core/hooks/useTable",
       "to": "/docs/data/hooks/use-table"
-    },
-    {
-      "from": "/docs/api-reference/core/hooks/translate/useGetLocale",
-      "to": "/docs/i18n/hooks/use-get-locale"
-    },
-    {
-      "from": "/docs/api-reference/core/hooks/translate/useSetLocale",
-      "to": "/docs/i18n/hooks/use-set-locale"
-    },
-    {
-      "from": "/docs/api-reference/core/hooks/translate/useTranslate",
-      "to": "/docs/i18n/hooks/use-translate"
     },
     {
       "from": "/docs/api-reference/core/hooks/ui/useModal",
@@ -1974,18 +1942,6 @@
       "to": "/docs/routing/hooks/use-navigation"
     },
     {
-      "from": "/docs/core/hooks/translate/use-get-locale",
-      "to": "/docs/i18n/hooks/use-get-locale"
-    },
-    {
-      "from": "/docs/core/hooks/translate/use-set-locale",
-      "to": "/docs/i18n/hooks/use-set-locale"
-    },
-    {
-      "from": "/docs/core/hooks/translate/use-translate",
-      "to": "/docs/i18n/hooks/use-translate"
-    },
-    {
       "from": "/docs/core/hooks/utilities/use-notification",
       "to": "/docs/notification/hooks/use-notification"
     },
@@ -2016,10 +1972,6 @@
     {
       "from": "/docs/packages/data-providers/strapi-v4",
       "to": "/docs/data/packages/strapi-v4"
-    },
-    {
-      "from": "/docs/packages/data-providers/strapi-graphql",
-      "to": "/docs/data/packages/strapi-graphql"
     },
     {
       "from": "/docs/packages/data-providers/supabase",
@@ -2054,12 +2006,24 @@
       "to": "/blog/javascript-vs-typescript/"
     },
     {
+      "from": "/docs/guides-and-concepts/multi-tenancy/appwrite/",
+      "to": "/docs/guides-concepts/multitenancy"
+    },
+    {
+      "from": "/docs/guides-and-concepts/multi-tenancy/strapi-v4/",
+      "to": "/docs/guides-concepts/multitenancy"
+    },
+    {
       "from": "/docs/advanced-tutorials/multi-tenancy/appwrite",
-      "to": "/docs/guides-concepts/multi-tenancy"
+      "to": "/docs/guides-concepts/multitenancy"
     },
     {
       "from": "/docs/advanced-tutorials/multi-tenancy/strapi-v4",
-      "to": "/docs/guides-concepts/multi-tenancy"
+      "to": "/docs/guides-concepts/multitenancy"
+    },
+    {
+      "from": "/docs/guides-concepts/multi-tenancy",
+      "to": "/docs/guides-concepts/multitenancy"
     },
     {
       "from": "/docs/advanced-tutorials/import-export/csv-import/",
@@ -2076,6 +2040,163 @@
     {
       "from": "/blog/refine-react-admin-invoice-genarator",
       "to": "/blog/refine-react-admin-invoice-generator"
+    },
+    {
+      "from": "/docs/packages/data-providers/strapi-graphql",
+      "to": "/docs/guides-concepts/data-fetching"
+    },
+    {
+      "from": "/docs/data/packages/strapi-graphql",
+      "to": "/docs/guides-concepts/data-fetching"
+    },
+    {
+      "from": "/docs/examples/data-provider/strapi-graphql/",
+      "to": "/docs/guides-concepts/data-fetching"
+    },
+    {
+      "from": "/docs/examples/data-provider/nhost/",
+      "to": "/docs/guides-concepts/data-fetching"
+    },
+    {
+      "from": "/docs/examples/next-js/nextjs-appdir/",
+      "to": "/docs/examples/next-js"
+    },
+    {
+      "to": "/tutorial",
+      "from": [
+        "/docs/tutorial/adding-crud-pages/antd/add-create-page",
+        "/docs/tutorial/adding-crud-pages/antd/add-delete-feature",
+        "/docs/tutorial/adding-crud-pages/antd/add-edit-page",
+        "/docs/tutorial/adding-crud-pages/antd/add-show-page",
+        "/docs/tutorial/adding-crud-pages/antd/adding-sort-and-filters",
+        "/docs/tutorial/adding-crud-pages/antd/index",
+        "/docs/tutorial/adding-crud-pages/chakra-ui/add-create-page",
+        "/docs/tutorial/adding-crud-pages/chakra-ui/add-delete-feature",
+        "/docs/tutorial/adding-crud-pages/chakra-ui/add-edit-page",
+        "/docs/tutorial/adding-crud-pages/chakra-ui/add-show-page",
+        "/docs/tutorial/adding-crud-pages/chakra-ui/adding-sort-and-filters",
+        "/docs/tutorial/adding-crud-pages/chakra-ui/index",
+        "/docs/tutorial/adding-crud-pages/headless/add-create-page",
+        "/docs/tutorial/adding-crud-pages/headless/add-delete-feature",
+        "/docs/tutorial/adding-crud-pages/headless/add-edit-page",
+        "/docs/tutorial/adding-crud-pages/headless/add-show-page",
+        "/docs/tutorial/adding-crud-pages/headless/adding-sort-and-filters",
+        "/docs/tutorial/adding-crud-pages/headless/index",
+        "/docs/tutorial/adding-crud-pages/headless/layout-menu-breadcrumb",
+        "/docs/tutorial/adding-crud-pages/mantine/add-create-page",
+        "/docs/tutorial/adding-crud-pages/mantine/add-delete-feature",
+        "/docs/tutorial/adding-crud-pages/mantine/add-edit-page",
+        "/docs/tutorial/adding-crud-pages/mantine/add-show-page",
+        "/docs/tutorial/adding-crud-pages/mantine/adding-sort-and-filters",
+        "/docs/tutorial/adding-crud-pages/mantine/index",
+        "/docs/tutorial/adding-crud-pages/mui/add-create-page",
+        "/docs/tutorial/adding-crud-pages/mui/add-delete-feature",
+        "/docs/tutorial/adding-crud-pages/mui/add-edit-page",
+        "/docs/tutorial/adding-crud-pages/mui/add-show-page",
+        "/docs/tutorial/adding-crud-pages/mui/adding-sort-and-filters",
+        "/docs/tutorial/adding-crud-pages/mui/index",
+        "/docs/tutorial/getting-started/antd/create-project",
+        "/docs/tutorial/getting-started/antd/generate-crud-pages",
+        "/docs/tutorial/getting-started/chakra-ui/create-project",
+        "/docs/tutorial/getting-started/chakra-ui/generate-crud-pages",
+        "/docs/tutorial/getting-started/deploy-project",
+        "/docs/tutorial/getting-started/headless/create-project",
+        "/docs/tutorial/getting-started/headless/generate-crud-pages",
+        "/docs/tutorial/getting-started/index",
+        "/docs/tutorial/getting-started/mantine/create-project",
+        "/docs/tutorial/getting-started/mantine/generate-crud-pages",
+        "/docs/tutorial/getting-started/mui/create-project",
+        "/docs/tutorial/getting-started/mui/generate-crud-pages",
+        "/docs/tutorial/getting-started/prepare-env",
+        "/docs/tutorial/getting-started/store-your-repository",
+        "/docs/tutorial/introduction/index",
+        "/docs/tutorial/introduction/prerequisite",
+        "/docs/tutorial/introduction/select-framework",
+        "/docs/tutorial/understanding-authprovider/index",
+        "/docs/tutorial/understanding-authprovider/antd/auth-pages",
+        "/docs/tutorial/understanding-authprovider/chakra-ui/auth-pages",
+        "/docs/tutorial/understanding-authprovider/create-authprovider",
+        "/docs/tutorial/understanding-authprovider/headless/auth-pages",
+        "/docs/tutorial/understanding-authprovider/mantine/auth-pages",
+        "/docs/tutorial/understanding-authprovider/mui/auth-pages",
+        "/docs/tutorial/understanding-dataprovider/create-dataprovider",
+        "/docs/tutorial/understanding-dataprovider/index",
+        "/docs/tutorial/understanding-dataprovider/swizzle",
+        "/docs/tutorial/understanding-resources/index"
+      ]
+    },
+    {
+      "from": "/blog/simple-web-application-with-refine/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/manage-hackathons-with-refine/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/create-a-feedback-admin-panel-with-refine-and-strapi/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/web3-with-refine/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/how-to-add-darkmode-in-ant-design/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/handcrafted-nextjs-e-commerce-app-tutorial-strapi-chakra-ui/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/create-full-stack-app-with-refine/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/how-to-become-a-production-hero-refine-2022/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/how-to-access-control-with-nestjs/",
+      "to": "/blog"
+    },
+    {
+      "from": "/blog/e-mail-subscription-panel-with-refine/",
+      "to": "/blog"
+    },
+    {
+      "from": "/tutorial/next-steps/cli/react-router",
+      "to": "/tutorial/next-steps/cli/react-router/ant-design"
+    },
+    {
+      "from": "/tutorial/next-steps/devtools/react-router",
+      "to": "/tutorial/next-steps/devtools/react-router/ant-design"
+    },
+    {
+      "from": "/tutorial/next-steps/summary",
+      "to": "/tutorial/next-steps/summary/react-router/ant-design"
+    },
+    {
+      "from": "/blog/2024/01/26/git-stash/",
+      "to": "/blog/git-stash"
+    },
+    {
+      "to": "/docs/i18n/hooks/use-translation",
+      "from": [
+        "/docs/i18n/hooks/use-get-locale",
+        "/docs/i18n/hooks/use-set-locale",
+        "/docs/i18n/hooks/use-translate",
+        "/docs/core/hooks/translate/use-get-locale",
+        "/docs/core/hooks/translate/use-set-locale",
+        "/docs/core/hooks/translate/use-translate",
+        "/docs/api-reference/core/hooks/translate/useGetLocale",
+        "/docs/api-reference/core/hooks/translate/useSetLocale",
+        "/docs/api-reference/core/hooks/translate/useTranslate",
+        "/docs/core/hooks/translate/useGetLocale/",
+        "/docs/core/hooks/translate/useSetLocale/",
+        "/docs/core/hooks/translate/useTranslate/"
+      ]
     }
   ]
 }

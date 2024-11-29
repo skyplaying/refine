@@ -32,7 +32,7 @@ export default function UseSelectMantine() {
 const AppTsxCode = /* tsx */ `
 import React from "react";
 import { Refine } from "@refinedev/core";
-import { notificationProvider, RefineThemes } from "@refinedev/mantine";
+import { useNotificationProvider, RefineThemes } from "@refinedev/mantine";
 import { NotificationsProvider } from "@mantine/notifications";
 import { MantineProvider, Global } from "@mantine/core";
 import dataProvider from "@refinedev/simple-rest";
@@ -51,7 +51,7 @@ const App: React.FC = () => {
                     dataProvider={dataProvider(
                         "https://api.fake-rest.refine.dev",
                     )}
-                    notificationProvider={notificationProvider}
+                    notificationProvider={useNotificationProvider}
                     resources={[
                         {
                             name: "posts",
@@ -88,7 +88,7 @@ export const EditPage: React.FC = () => {
     const {
         saveButtonProps,
         getInputProps,
-        refineCore: { queryResult: productQueryResult },
+        refineCore: { query: productQuery },
     } = useForm<IProduct>({
         initialValues: {
             name: "",
@@ -102,7 +102,7 @@ export const EditPage: React.FC = () => {
             action: "edit",
         },
     });
-    const product = productQueryResult?.data?.data;
+    const product = productQuery?.data?.data;
 
     const { selectProps, queryResult: categoriesQueryResult } =
         useSelect<ICategory>({

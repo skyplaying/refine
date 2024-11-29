@@ -13,6 +13,7 @@ export default function NotificationMui() {
         "@emotion/styled": "^11.8.1",
         "@mui/lab": "^5.0.0-alpha.85",
         "@mui/material": "^5.14.2",
+        "@mui/system": "latest",
         "@refinedev/mui": "latest",
       }}
       startRoute="/"
@@ -34,7 +35,7 @@ import React from "react";
 import { Refine } from "@refinedev/core";
 import {
     RefineThemes,
-    notificationProvider,
+    useNotificationProvider,
     RefineSnackbarProvider,
 } from "@refinedev/mui";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -53,7 +54,7 @@ const App: React.FC = () => {
                     dataProvider={dataProvider(
                         "https://api.fake-rest.refine.dev",
                     )}
-                    notificationProvider={notificationProvider}
+                    notificationProvider={useNotificationProvider}
                 >
                     <HomePage />
                 </Refine>

@@ -2,8 +2,8 @@
 id: generate-crud-pages
 title: 4. Generate CRUD pages automatically with Inferencer
 tutorial:
-  prev: tutorial/getting-started/{preferredUI}/create-project
-  next: tutorial/getting-started/store-your-repository
+  prev: 3.xx.xx/tutorial/getting-started/{preferredUI}/create-project
+  next: 3.xx.xx/tutorial/getting-started/store-your-repository
 ---
 
 ## Inferencer
@@ -44,7 +44,7 @@ import { Refine } from "@pankod/refine-core";
 import {
   Layout,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
   ErrorComponent,
 } from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-react-router-v6";
@@ -61,7 +61,7 @@ const App: React.FC = () => {
       dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
       Layout={Layout}
       ReadyPage={ReadyPage}
-      notificationProvider={notificationProvider}
+      notificationProvider={useNotificationProvider}
       catchAll={<ErrorComponent />}
       //highlight-start
       resources={[
@@ -114,7 +114,7 @@ import { Refine } from "@pankod/refine-core";
 import {
   Layout,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
   ErrorComponent,
 } from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-react-router-v6";
@@ -130,7 +130,7 @@ const App: React.FC = () => {
       dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
       Layout={Layout}
       ReadyPage={ReadyPage}
-      notificationProvider={notificationProvider}
+      notificationProvider={useNotificationProvider}
       catchAll={<ErrorComponent />}
       resources={[
         {
@@ -161,7 +161,7 @@ import { Refine } from "@pankod/refine-core";
 import {
   Layout,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
   ErrorComponent,
 } from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-react-router-v6";
@@ -177,7 +177,7 @@ const App: React.FC = () => {
       dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
       Layout={Layout}
       ReadyPage={ReadyPage}
-      notificationProvider={notificationProvider}
+      notificationProvider={useNotificationProvider}
       catchAll={<ErrorComponent />}
       resources={[
         {
@@ -208,7 +208,7 @@ import { Refine } from "@pankod/refine-core";
 import {
   Layout,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
   ErrorComponent,
 } from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-react-router-v6";
@@ -224,7 +224,7 @@ const App: React.FC = () => {
       dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
       Layout={Layout}
       ReadyPage={ReadyPage}
-      notificationProvider={notificationProvider}
+      notificationProvider={useNotificationProvider}
       catchAll={<ErrorComponent />}
       resources={[
         {
@@ -255,7 +255,7 @@ import { Refine } from "@pankod/refine-core";
 import {
   Layout,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
   ErrorComponent,
 } from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-react-router-v6";
@@ -271,7 +271,7 @@ const App: React.FC = () => {
       dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
       Layout={Layout}
       ReadyPage={ReadyPage}
-      notificationProvider={notificationProvider}
+      notificationProvider={useNotificationProvider}
       catchAll={<ErrorComponent />}
       resources={[
         {

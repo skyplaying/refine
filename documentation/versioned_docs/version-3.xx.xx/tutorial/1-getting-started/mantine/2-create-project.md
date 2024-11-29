@@ -2,8 +2,8 @@
 id: create-project
 title: 3. Create your refine project
 tutorial:
-  prev: tutorial/getting-started/{preferredUI}/prepare-env
-  next: tutorial/getting-started/{preferredUI}/generate-crud-pages
+  prev: 3.xx.xx/tutorial/getting-started/{preferredUI}/prepare-env
+  next: 3.xx.xx/tutorial/getting-started/{preferredUI}/generate-crud-pages
 ---
 
 import Tabs from '@theme/Tabs';
@@ -97,7 +97,7 @@ import {
   MantineProvider,
   Global,
   NotificationsProvider,
-  notificationProvider,
+  useNotificationProvider,
   LightTheme,
   Layout,
   ReadyPage,
@@ -112,7 +112,7 @@ const App = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
           Layout={Layout}

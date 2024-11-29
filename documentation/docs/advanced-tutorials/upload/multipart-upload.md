@@ -5,7 +5,7 @@ title: Multipart Upload
 
 ```tsx live shared
 import { Refine } from "@refinedev/core";
-import { AuthPage, RefineThemes, ThemedLayoutV2, ErrorComponent, notificationProvider } from "@refinedev/antd";
+import { AuthPage, RefineThemes, ThemedLayoutV2, ErrorComponent, useNotificationProvider } from "@refinedev/antd";
 import routerProvider, { NavigateToResource } from "@refinedev/react-router-v6";
 import { ConfigProvider } from "antd";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
@@ -155,10 +155,10 @@ const PostCreate: React.FC = () => {
 };
 
 const PostEdit: React.FC = () => {
-    const { formProps, saveButtonProps, queryResult } =
+    const { formProps, saveButtonProps, query } =
         RefineAntdUseForm<IPost>();
 
-    const postData = queryResult?.data?.data;
+    const postData = query?.data?.data;
     const { selectProps: categorySelectProps } = RefineAntdUseSelect<ICategory>({
         resource: "categories",
         defaultValue: postData?.category.id,
@@ -298,7 +298,13 @@ export const PostCreate: React.FC = () => {
             noStyle
           >
             // highlight-start
-            <Upload.Dragger name="file" action={`${apiUrl}/media/upload`} listType="picture" maxCount={5} multiple>
+            <Upload.Dragger
+              name="file"
+              action={`${apiUrl}/media/upload`}
+              listType="picture"
+              maxCount={5}
+              multiple
+            >
               <p className="ant-upload-text">Drag & drop a file in this area</p>
             </Upload.Dragger>
             // highlight-end
@@ -352,7 +358,7 @@ const App = () => {
               edit: "/posts/edit/:id",
             },
           ]}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
         >
           <Routes>
             <Route
@@ -496,7 +502,13 @@ export const PostEdit: React.FC = () => {
             noStyle
           >
             // highlight-start
-            <Upload.Dragger name="file" action={`${apiUrl}/media/upload`} listType="picture" maxCount={5} multiple>
+            <Upload.Dragger
+              name="file"
+              action={`${apiUrl}/media/upload`}
+              listType="picture"
+              maxCount={5}
+              multiple
+            >
               <p className="ant-upload-text">Drag & drop a file in this area</p>
             </Upload.Dragger>
             // highlight-end
@@ -527,7 +539,7 @@ const App = () => {
               edit: "/posts/edit/:id",
             },
           ]}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
         >
           <Routes>
             <Route
@@ -642,7 +654,12 @@ export const PostCreate: React.FC = () => {
           <Input />
         </Form.Item>
         <Form.Item label="Image">
-          <Form.Item name="image" valuePropName="fileList" getValueFromEvent={getValueFromEvent} noStyle>
+          <Form.Item
+            name="image"
+            valuePropName="fileList"
+            getValueFromEvent={getValueFromEvent}
+            noStyle
+          >
             <Upload.Dragger
               name="file"
               action={`${apiUrl}/media/upload`}

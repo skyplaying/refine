@@ -101,23 +101,11 @@ const App: React.FC = () => {
 ```
 
 </TabItem>
-<TabItem value="react-location">
-
-```tsx title="App.tsx"
-import { Refine } from "@refinedev/core";
-import routerProvider from "@pankod/refine-react-location";
-
-const App: React.FC = () => {
-  return <Refine legacyRouterProvider={routerProvider} />;
-};
-```
-
-</TabItem>
 <TabItem value="nextjs">
 
 ```tsx title="pages/_app.tsx"
 import { Refine } from "@refinedev/core";
-import routerProvider from "@refinedev/nextjs-router";
+import routerProvider from "@refinedev/nextjs-router/pages";
 import { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
@@ -134,7 +122,14 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
 ```tsx title="app/root.tsx"
 import type { MetaFunction } from "@remix-run/node";
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react";
 import { Refine } from "@refinedev/core";
 import routerProvider from "@refinedev/remix-router";
 
@@ -207,7 +202,7 @@ The `Link` component is used to create links to other pages. It accepts a `to` p
 
 - [React Router V6](https://github.com/refinedev/refine/blob/master/packages/react-router-v6/src/bindings.tsx)
 - [Next.js Router](https://github.com/refinedev/refine/blob/master/packages/nextjs-router/src/pages/bindings.tsx)
-- [Remix Router](https://github.com/refinedev/refine/blob/master/packages/remix/src/bindings.tsx)
+- [Remix Router](https://github.com/refinedev/refine/blob/master/packages/remix-router/src/bindings.tsx)
 
 ## Legacy Router Provider
 
@@ -218,4 +213,4 @@ If you want to use a legacy router provider, you can pass them to the `<Refine /
 [expo-router]: https://www.npmjs.com/package/@refinenative/expo-router
 [react-router-v6]: https://github.com/refinedev/refine/tree/master/packages/react-router-v6
 [nextjs-router]: https://github.com/refinedev/refine/tree/master/packages/nextjs-router
-[remix-router]: https://github.com/refinedev/refine/tree/master/packages/remix
+[remix-router]: https://github.com/refinedev/refine/tree/master/packages/remix-router

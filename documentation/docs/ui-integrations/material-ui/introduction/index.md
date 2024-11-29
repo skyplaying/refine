@@ -100,7 +100,11 @@ export const ProductCreate: FC = () => {
 
   return (
     <Create saveButtonProps={saveButtonProps}>
-      <Box component="form" sx={{ display: "flex", flexDirection: "column" }} autoComplete="off">
+      <Box
+        component="form"
+        sx={{ display: "flex", flexDirection: "column" }}
+        autoComplete="off"
+      >
         <TextField
           id="name"
           {...register("name", {
@@ -154,14 +158,11 @@ Material UI has its own notification elements but lacks the notification managem
 
 ```tsx title="app.tsx"
 import { Refine } from "@refinedev/core";
-import { notificationProvider, RefineSnackbarProvider } from "@refinedev/antd";
+import { useNotificationProvider } from "@refinedev/mui";
 
 const App = () => {
   return (
-    // `notistack` also requires a context provider to be used
-    <RefineSnackbarProvider>
-      <Refine notificationProvider={notificationProvider}>{/* ... */}</Refine>
-    </RefineSnackbarProvider>
+    <Refine notificationProvider={useNotificationProvider}>{/* ... */}</Refine>
   );
 };
 ```
@@ -200,7 +201,7 @@ import LayoutRemix from "./previews/layout-remix.tsx";
 </TabItem>
 </Tabs>
 
-[`<ThemedLayoutV2 />`](/docs/ui-integrations/material-ui/components/themed-layout) component consists of a header, sider and a content area. The sider have a navigation menu items for the defined resources of Refine, if an authentication provider is present, it will also have a functional logout buttun. The header contains the app logo and name and also information about the current user if an authentication provider is present.
+[`<ThemedLayoutV2 />`](/docs/ui-integrations/material-ui/components/themed-layout) component consists of a header, sider and a content area. The sider have a navigation menu items for the defined resources of Refine, if an authentication provider is present, it will also have a functional logout button. The header contains the app logo and name and also information about the current user if an authentication provider is present.
 
 Additionally, Refine also provides a [`<Breadcrumb />`](/docs/ui-integrations/material-ui/components/breadcrumb/) component that uses the Material UI's component as a base and provide appropriate breadcrumbs for the current route. This component is used in the basic views provided by Refine's Material UI package automatically.
 
@@ -325,7 +326,10 @@ export const ProductShow = () => {
         Title
       </Typography>
       {/* highlight-next-line */}
-      <NumberField value={record?.price} options={{ style: "currency", currency: "USD" }} />
+      <NumberField
+        value={record?.price}
+        options={{ style: "currency", currency: "USD" }}
+      />
     </Show>
   );
 };

@@ -1,6 +1,6 @@
-import { AuthProvider } from "@refinedev/core";
+import type { AuthProvider } from "@refinedev/core";
 
-import { User } from "@/graphql/schema.types";
+import type { User } from "@/graphql/schema.types";
 
 import { API_URL, dataProvider } from "./data";
 
@@ -63,7 +63,6 @@ export const authProvider: AuthProvider = {
     if (error.statusCode === "UNAUTHENTICATED") {
       return {
         logout: true,
-        ...error,
       };
     }
 

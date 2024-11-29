@@ -143,7 +143,11 @@ As a best-practice, we suggest writing your queries/mutations in a separate file
 import gql from "graphql-tag";
 
 export const POSTS_LIST_QUERY = gql`
-  query PostsList($paging: OffsetPaging!, $filter: BlogPostFilter, $sorting: [BlogPostSort!]!) {
+  query PostsList(
+    $paging: OffsetPaging!
+    $filter: BlogPostFilter
+    $sorting: [BlogPostSort!]!
+  ) {
     blogPosts(paging: $paging, filter: $filter, sorting: $sorting) {
       nodes {
         id
@@ -182,7 +186,8 @@ Once you write your query, you can generate types for it with `GraphQL Code Gene
 npm run codegen
 ```
 
-:::simple
+:::simple Good to know
+
 `@refinedev/nestjs-query` also exports 2 utility types:
 
 - GetFields: Get fields from your non-list queries and mutations.
@@ -289,7 +294,11 @@ GetFields<PostCreateMutation>; // { id: string; }
 Let's say you have the following query:
 
 ```graphql
-query PostsList($paging: OffsetPaging!, $filter: BlogPostFilter, $sorting: [BlogPostSort!]!) {
+query PostsList(
+  $paging: OffsetPaging!
+  $filter: BlogPostFilter
+  $sorting: [BlogPostSort!]!
+) {
   blogPosts(paging: $paging, filter: $filter, sorting: $sorting) {
     nodes {
       id
@@ -328,13 +337,18 @@ PostFields; // { id: string }
 ```tsx title="app.tsx"
 import Refine from "@refinedev/core";
 // highlight-next-line
-import dataProvider, { GraphQLClient, liveProvider } from "@refinedev/nestjs-query";
+import dataProvider, {
+  GraphQLClient,
+  liveProvider,
+} from "@refinedev/nestjs-query";
 // highlight-next-line
 import { createClient } from "graphql-ws";
 
 const client = new GraphQLClient("https://api.nestjs-query.refine.dev/graphql");
 // highlight-next-line
-const wsClient = createClient({ url: "wss://api.nestjs-query.refine.dev/graphql" });
+const wsClient = createClient({
+  url: "wss://api.nestjs-query.refine.dev/graphql",
+});
 
 const App = () => (
   <Refine
@@ -389,7 +403,10 @@ export class AppModule {}
 If your API uses authentication, you can easily provide a custom fetcher for the requests and handle the authentication logic there. When creating a GraphQL Client, you can pass a `fetch` function to the client options. This function will be used to append the authentication headers to the requests.
 
 ```tsx title="data-provider.tsx"
-import graphqlDataProvider, { GraphQLClient, liveProvider as graphqlLiveProvider } from "@refinedev/nestjs-query";
+import graphqlDataProvider, {
+  GraphQLClient,
+  liveProvider as graphqlLiveProvider,
+} from "@refinedev/nestjs-query";
 import { createClient } from "graphql-ws";
 
 const client = new GraphQLClient(API_URL, {

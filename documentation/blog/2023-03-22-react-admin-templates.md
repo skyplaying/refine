@@ -53,11 +53,11 @@ In addition to its aesthetic appeal, the Refine CRM admin template is also highl
 
 Another key feature of the Refine CRM admin template is its analytics and reporting capabilities. The template comes with built-in analytics tools that allow businesses to track sales, revenue, and other key metrics. This information is presented in a clear and easy-to-understand format, making it easy to identify trends and make data-driven decisions.
 
-Overall, the refine CRM admin template is an excellent choice for businesses that need a user-friendly and highly functional admin interface for their e-commerce website.
+Overall, the Refine CRM admin template is an excellent choice for businesses that need a user-friendly and highly functional admin interface for their e-commerce website.
 
 **Live example:** https://example.crm.refine.dev/
 
-**Source code**: https://github.com/refinedev/refine/tree/master/examples/app-crm
+**Template**: https://refine.dev/templates/crm-application/
 
 ## 2. Elstar
 

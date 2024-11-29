@@ -70,7 +70,11 @@ const API_URL = "https://api.fake-rest.refine.dev";
 
 const App: React.FC = () => {
   return (
-    <MantineProvider theme={RefineThemes.Blue} withNormalizeCSS withGlobalStyles>
+    <MantineProvider
+      theme={RefineThemes.Blue}
+      withNormalizeCSS
+      withGlobalStyles
+    >
       <Global styles={{ body: { WebkitFontSmoothing: "auto" } }} />
       <BrowserRouter>
         <Refine
@@ -112,7 +116,7 @@ render(<App />);
 Example of above showing how to use `<ThemedLayoutV2>` with [`React Router v6`](/docs/packages/list-of-packages). You can see these examples for other routers:
 
 - [React Router v6](https://github.com/refinedev/refine/blob/master/examples/auth-mantine/src/App.tsx#L180)
-- [Next.js](https://github.com/refinedev/refine/blob/master/examples/with-nextjs-auth/pages/_app.tsx#L31)
+- [Next.js](https://github.com/refinedev/refine/blob/master/examples/with-nextjs/src/app/layout.tsx#L35)
 - [Remix](https://github.com/refinedev/refine/blob/master/examples/with-remix-auth/app/routes/_protected.tsx)
 
 ## Props
@@ -338,7 +342,11 @@ const API_URL = "https://api.fake-rest.refine.dev";
 
 const App: React.FC = () => {
   return (
-    <MantineProvider theme={RefineThemes.Blue} withNormalizeCSS withGlobalStyles>
+    <MantineProvider
+      theme={RefineThemes.Blue}
+      withNormalizeCSS
+      withGlobalStyles
+    >
       <Global styles={{ body: { WebkitFontSmoothing: "auto" } }} />
       <BrowserRouter>
         <Refine
@@ -448,7 +456,11 @@ const API_URL = "https://api.fake-rest.refine.dev";
 
 const App: React.FC = () => {
   return (
-    <MantineProvider theme={RefineThemes.Blue} withNormalizeCSS withGlobalStyles>
+    <MantineProvider
+      theme={RefineThemes.Blue}
+      withNormalizeCSS
+      withGlobalStyles
+    >
       <Global styles={{ body: { WebkitFontSmoothing: "auto" } }} />
       <BrowserRouter>
         <Refine
@@ -629,7 +641,11 @@ const App = () => {
     <Refine
     /* ... */
     >
-      <ThemedLayoutV2 Header={ThemedHeader} Sider={ThemedSider} Title={ThemedTitle}>
+      <ThemedLayoutV2
+        Header={ThemedHeader}
+        Sider={ThemedSider}
+        Title={ThemedTitle}
+      >
         /* ... */
       </ThemedLayoutV2>
     </Refine>
@@ -759,7 +775,11 @@ const DashboardPage = () => {
 
 const App: React.FC = () => {
   return (
-    <MantineProvider theme={RefineThemes.Blue} withNormalizeCSS withGlobalStyles>
+    <MantineProvider
+      theme={RefineThemes.Blue}
+      withNormalizeCSS
+      withGlobalStyles
+    >
       <Global styles={{ body: { WebkitFontSmoothing: "auto" } }} />
       <BrowserRouter>
         <Refine

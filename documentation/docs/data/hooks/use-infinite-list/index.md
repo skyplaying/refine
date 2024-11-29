@@ -27,6 +27,17 @@ The `useInfiniteList` hook supports pagination properties just like [`useList`](
 
 Dynamically changing the `pagination` properties will trigger a new request. The `fetchNextPage` method will increase the `pagination.current` property by one and trigger a new request as well.
 
+### Retrieving the Total Row Count
+
+When the `getList` method is called via `useInfiniteList`, it should ideally return the total count of rows (`rowCount`). The way this count is obtained depends on the data provider in use:
+- **REST Providers:** Commonly obtain the total count from the `x-total-count` header.
+- **GraphQL Providers:** Often source the count from specific data fields like `pageInfo.total`.
+- **Other Providers:** Follow their own practices for obtaining the total count.
+
+If the data provider doesn't return a specific count, the `getList` method may fall back to using the length of the paginated data array as the `rowCount`.
+
+For more information on how this works, refer to the [`getList` method documentation](https://refine.dev/docs/data/data-provider/#getlist).
+
 ```ts
 import { useInfiniteList } from "@refinedev/core";
 
@@ -70,7 +81,7 @@ useInfiniteList({
 });
 ```
 
-> For more information, refer to the [creating a data provider tutorial &#8594](/docs/tutorial/understanding-dataprovider/create-dataprovider/)
+> For more information, refer to the [creating a data provider tutorial &#8594](/docs/data/data-provider)
 
 If you have multiple resources with the same name, you can pass the `identifier` instead of the `name` of the resource. It will only be used as the main matching key for the resource, data provider methods will still work with the `name` of the resource defined in the `<Refine/>` component.
 
@@ -399,7 +410,14 @@ By default, `Refine` expects you to return the `cursor` object, but is not requi
 ```tsx
 import { useInfiniteList } from "@refinedev/core";
 
-const { data, error, hasNextPage, isLoading, fetchNextPage, isFetchingNextPage } = useInfiniteList({
+const {
+  data,
+  error,
+  hasNextPage,
+  isLoading,
+  fetchNextPage,
+  isFetchingNextPage,
+} = useInfiniteList({
   resource: "posts",
   // highlight-start
   queryOptions: {

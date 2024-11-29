@@ -3,8 +3,8 @@ id: add-edit-page
 title: 2. Adding Edit Page
 tutorial:
   order: 0
-  prev: tutorial/adding-crud-pages/{preferredUI}/index
-  next: tutorial/adding-crud-pages/{preferredUI}/add-show-page
+  prev: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/index
+  next: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-show-page
 ---
 
 Edit page is the page where you can edit the record. In this tutorial, we will create the edit page for the `blog_posts` resource.
@@ -40,7 +40,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   RefineSnackbarProvider,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           Layout={Layout}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
@@ -149,7 +149,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   RefineSnackbarProvider,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
@@ -168,7 +168,7 @@ const App: React.FC = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           Layout={Layout}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}

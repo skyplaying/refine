@@ -2,8 +2,8 @@
 id: generate-crud-pages
 title: 4. Generate CRUD pages automatically with Inferencer
 tutorial:
-  prev: tutorial/getting-started/{preferredUI}/create-project
-  next: tutorial/getting-started/store-your-repository
+  prev: 3.xx.xx/tutorial/getting-started/{preferredUI}/create-project
+  next: 3.xx.xx/tutorial/getting-started/store-your-repository
 ---
 
 ## Inferencer
@@ -49,7 +49,7 @@ import {
   Layout,
   refineTheme,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-chakra-ui";
 //highlight-next-line
 import { ChakraUIInferencer } from "@pankod/refine-inferencer/chakra-ui";
@@ -121,7 +121,7 @@ import {
   Layout,
   refineTheme,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-chakra-ui";
 import { ChakraUIInferencer } from "@pankod/refine-inferencer/chakra-ui";
 
@@ -170,7 +170,7 @@ import {
   Layout,
   refineTheme,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-chakra-ui";
 import { ChakraUIInferencer } from "@pankod/refine-inferencer/chakra-ui";
 
@@ -219,7 +219,7 @@ import {
   Layout,
   refineTheme,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-chakra-ui";
 import { ChakraUIInferencer } from "@pankod/refine-inferencer/chakra-ui";
 
@@ -268,7 +268,7 @@ import {
   Layout,
   refineTheme,
   ReadyPage,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-chakra-ui";
 import { ChakraUIInferencer } from "@pankod/refine-inferencer/chakra-ui";
 

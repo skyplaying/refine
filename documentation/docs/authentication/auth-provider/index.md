@@ -226,7 +226,8 @@ const authProvider: AuthProvider = {
       success: false,
       error: {
         name: "Login Failed!",
-        message: "The email or password that you've entered doesn't match any account.",
+        message:
+          "The email or password that you've entered doesn't match any account.",
       },
     };
   },
@@ -575,14 +576,18 @@ const mockUsers = [
 ];
 
 const authProvider: AuthProvider = {
-  // ---
-  getPermissions: () => {
-    const user = localStorage.getItem("auth");
+  // You can also pass a parameter but it is optional
+  getPermissions: (params) => {
+    if (params) {
+      // do some logic or make a request to server
+    } else {
+      const user = localStorage.getItem("auth");
 
-    if (user) {
-      const { roles } = JSON.parse(user);
+      if (user) {
+        const { roles } = JSON.parse(user);
 
-      return roles;
+        return roles;
+      }
     }
 
     return null;
@@ -1184,11 +1189,11 @@ const App = () => {
 
 ### How can I set authorization credentials?
 
-[Refer to the "Setting Authorization Credentials" section in the tutorial for more information &#8594](/docs/tutorial/understanding-authprovider/create-authprovider/#setting-authorization-credentials)
+[Refer to the "Setting Authorization Credentials" section in the tutorial for more information &#8594](/docs/guides-concepts/authentication)
 
 ### How can I implement refresh token mechanism?
 
-[Refer to the "Implementing Refresh Token Mechanism" section in the tutorial for more information &#8594](/docs/tutorial/understanding-authprovider/create-authprovider/#implementing-refresh-token-mechanism)
+[Refer to the "Implementing Refresh Token Mechanism" section in the tutorial for more information &#8594](/docs/guides-concepts/authentication)
 
 [use-login]: /docs/authentication/hooks/use-login
 [use-logout]: /docs/authentication/hooks/use-logout
@@ -1199,4 +1204,4 @@ const App = () => {
 [use-register]: /docs/authentication/hooks/use-register
 [use-forgot-password]: /docs/authentication/hooks/use-forgot-password
 [use-update-password]: /docs/authentication/hooks/use-update-password
-[create-auth-provider-tutorial]: /docs/tutorial/understanding-authprovider/create-authprovider
+[create-auth-provider-tutorial]: /docs/guides-concepts/authentication

@@ -10,7 +10,7 @@ It internally uses [`useCan`][use-can]'s return values to provide its functional
 
 Passes the given properties to the `can` method from your access control provider. After, if it returns `true`, it renders the children, otherwise, if it returns `false`, it renders [`fallback`](#fallback) prop if provided. Otherwise, it renders `null`.
 
-To learn more about the authorization, check out the [Authorization](/docs/guides-concepts/authorization) guide and [Access Control Provider](/docs/authorization/access-control-provider) documentation.
+To learn more about authorization, check out the [Authorization](/docs/guides-concepts/authorization) guide and [Access Control Provider](/docs/authorization/access-control-provider) documentation.
 
 ## Basic Usage
 
@@ -62,7 +62,9 @@ Callback to be called when [`useCan`][use-can] returns false.
 ```tsx
 <CanAccess
   onUnauthorized={({ resource, reason, action, params }) =>
-    console.log(`You cannot access ${resource}-${params.id} resource with ${action} action because ${reason}`)
+    console.log(
+      `You cannot access ${resource}-${params.id} resource with ${action} action because ${reason}`,
+    )
   }
 >
   <YourComponent />
@@ -75,6 +77,16 @@ Component to render if [`useCan`][use-can] returns false. If `undefined`, it ren
 
 ```tsx
 <CanAccess fallback={<div>You cannot access this section</div>}>
+  <YourComponent />
+</CanAccess>
+```
+
+### queryOptions
+
+Accepts `UseQueryOptions<CanReturnType>` to customize the caching behavior of the underlying query.
+
+```tsx
+<CanAccess queryOptions={{ cacheTime: 25000 }}>
   <YourComponent />
 </CanAccess>
 ```

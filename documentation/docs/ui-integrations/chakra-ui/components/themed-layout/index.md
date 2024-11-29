@@ -110,7 +110,7 @@ render(<App />);
 Example above shows how to use `<ThemedLayoutV2>` with [`React Router v6`](/docs/packages/list-of-packages). You can see these examples for other routers:
 
 - [React Router v6](https://github.com/refinedev/refine/blob/master/examples/auth-chakra-ui/src/App.tsx#L171)
-- [Next.js](https://github.com/refinedev/refine/blob/master/examples/with-nextjs-auth/pages/_app.tsx#L31)
+- [Next.js](https://github.com/refinedev/refine/blob/master/examples/with-nextjs/src/app/layout.tsx#L35)
 - [Remix](https://github.com/refinedev/refine/blob/master/examples/with-remix-auth/app/routes/_protected.tsx)
 
 > ⚠️ Next.js and Remix examples are using `<ThemedLayoutV2`> from `@refinedev/antd` package. But you can use `<ThemedLayoutV2>` from `@refinedev/chakra-ui` as same.
@@ -360,7 +360,12 @@ const App: React.FC = () => {
                 // highlight-next-line
                 <ThemedLayoutV2
                   Footer={() => (
-                    <Flex justifyContent="center" alignItems="center" bg="teal.500" h="64px">
+                    <Flex
+                      justifyContent="center"
+                      alignItems="center"
+                      bg="teal.500"
+                      h="64px"
+                    >
                       My Custom Footer
                     </Flex>
                   )}
@@ -398,7 +403,12 @@ const App: React.FC = () => {
       <ThemedLayoutV2
         // highlight-start
         Footer={() => (
-          <Flex justifyContent="center" alignItems="center" bg="teal.500" h="64px">
+          <Flex
+            justifyContent="center"
+            alignItems="center"
+            bg="teal.500"
+            h="64px"
+          >
             My Custom Footer
           </Flex>
         )}
@@ -624,7 +634,11 @@ const App = () => {
     <Refine
     /* ... */
     >
-      <ThemedLayoutV2 Header={ThemedHeader} Sider={ThemedSider} Title={ThemedTitle}>
+      <ThemedLayoutV2
+        Header={ThemedHeader}
+        Sider={ThemedSider}
+        Title={ThemedTitle}
+      >
         /* ... */
       </ThemedLayoutV2>
     </Refine>

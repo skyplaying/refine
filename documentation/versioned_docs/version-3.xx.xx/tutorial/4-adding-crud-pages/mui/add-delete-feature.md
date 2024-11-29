@@ -3,8 +3,8 @@ id: add-delete-feature
 title: 5. Adding Delete Feature
 tutorial:
   order: 0
-  prev: tutorial/adding-crud-pages/{preferredUI}/add-create-page
-  next: tutorial/adding-crud-pages/{preferredUI}/adding-sort-and-filters
+  prev: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/add-create-page
+  next: 3.xx.xx/tutorial/adding-crud-pages/{preferredUI}/adding-sort-and-filters
 ---
 
 There are many ways to delete a record. In this tutorial, we will first use the `<DeleteButton/>` to delete a record and then we will learn how to enable the delete feature on the show page and edit page.
@@ -68,7 +68,7 @@ import {
   GlobalStyles,
   ThemeProvider,
   RefineSnackbarProvider,
-  notificationProvider,
+  useNotificationProvider,
 } from "@pankod/refine-mui";
 import routerProvider from "@pankod/refine-react-router-v6";
 import dataProvider from "@pankod/refine-simple-rest";
@@ -87,7 +87,7 @@ const App: React.FC = () => {
         <Refine
           routerProvider={routerProvider}
           dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-          notificationProvider={notificationProvider}
+          notificationProvider={useNotificationProvider}
           Layout={Layout}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}

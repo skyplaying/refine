@@ -384,7 +384,7 @@ After obtaining the token, we'll use Axios interceptors to include the token in 
 
 ## TanStack Query `QueryClient`
 
-To modify the [`QueryClient`](https://tanstack.com/query/latest/docs/react/reference/QueryClient) instance, you can use the `reactQuery` prop of the [`<Refine />`](/docs/core/refine-component) component.
+To modify the [`QueryClient`](https://tanstack.com/query/v4/docs/reference/QueryClient) instance, you can use the `reactQuery` prop of the [`<Refine />`](/docs/core/refine-component) component.
 
 ## `dataProvider` interface
 
@@ -405,9 +405,9 @@ To better understand the data provider interface, we have created an example tha
 <DataHooks />
 
 [basekey]: /docs/core/interface-references#basekey
-[create-a-data-provider]: /docs/tutorial/understanding-dataprovider/create-dataprovider/
-[swizzle-a-data-provider]: /docs/tutorial/understanding-dataprovider/swizzle/
-[data-provider-tutorial]: /docs/tutorial/understanding-dataprovider/
+[create-a-data-provider]: /docs/data/data-provider
+[swizzle-a-data-provider]: /docs/packages/cli#swizzle
+[data-provider-tutorial]: /docs/data/data-provider
 [use-api-url]: /docs/data/hooks/use-api-url
 [use-create]: /docs/data/hooks/use-create
 [use-create-many]: /docs/data/hooks/use-create
